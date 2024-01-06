@@ -1,45 +1,45 @@
 ---
-title: Event.target
+title: "Event: свойство target"
 slug: Web/API/Event/target
 ---
 
 {{ApiRef("DOM")}}
 
-Свойство **`target`** интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.
+Доступное только для чтения свойство **`target`** интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.
 
-Синтаксис
+Синтаксис:
 
+```js
+const theTarget = event.target;
 ```
-theTarget = event.target
-```
 
-Значение:
+## Значение
 
-{{domxref("EventTarget")}}
+Связано с {{domxref("EventTarget")}}.
 
 ## Пример
 
 Свойство `event.target` может быть использовано для реализации **делегирования событий**.
 
-```
+```js
 // Создадим список
-var ul = document.createElement('ul');
+const ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
+const li1 = document.createElement("li");
+const li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
-  // e.target ссылается на кликнутый <li> элемент
-  // Он отличается от e.currentTarget который будет ссылаться на родительский <ul> в этом контексте
-  e.target.style.visibility = 'hidden';
+function hide(evt) {
+  // evt.target ссылается на элемент <li>, на котором произошло нажатие
+  // Он отличается от evt.currentTarget, который будет ссылаться на родительский <ul> в этом контексте
+  evt.target.style.visibility = "hidden";
 }
 
 // Назначим обработчик к списку
-// Он будет вызван когда кликнут на любой <li>
-ul.addEventListener('click', hide, false);
+// Он будет вызван, когда нажатие произошло на любом из <li>
+ul.addEventListener("click", hide, false);
 ```
 
 ## Спецификации
@@ -57,11 +57,11 @@ ul.addEventListener('click', hide, false);
 ```js
 function hide(e) {
   // Поддержка IE 6-8
-  var target = e.target || e.srcElement;
+  const target = e.target || e.srcElement;
   target.style.visibility = "hidden";
 }
 ```
 
 ## Смотрите также
 
-- [Comparison of Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Сравнение разных Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)
