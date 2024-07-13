@@ -2,19 +2,19 @@
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 l10n:
-  sourceCommit:
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}
 
-**`Symbol.asyncIterator`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@asyncIterator`를 나타냅니다.
-[비동기 순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_proocols#the_async_iterator_and_async_iterable_proocols)은 객체에 대한 비동기 반복기를 반환하는 메서드에 대해 이 심볼을 검색합니다. 객체가 비동기 순회가 되려면 `@@asyncIterator` 키가 있어야 합니다.
+**`Symbol.asyncIterator`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.asyncIterator`를 나타냅니다.
+[비동기 순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_proocols#the_async_iterator_and_async_iterable_proocols)은 객체에 대한 비동기 반복기를 반환하는 메서드에 대해 이 심볼을 검색합니다. 객체가 비동기 순회가 되려면 `Symbol.asyncIterator` 키가 있어야 합니다.
 
 {{EmbedInteractiveExample("pages/js/symbol-asynciterator.html", "taller")}}
 
 ## 값
 
-잘 알려진 심볼 `@@asyncIterator`.
+잘 알려진 심볼 `Symbol.asyncIterator`.
 
 {{js_property_attributes(0, 0, 0)}}
 
