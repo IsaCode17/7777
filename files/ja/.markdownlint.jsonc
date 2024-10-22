@@ -1,6 +1,0 @@
-{
-  "extends": "../../.markdownlint.jsonc",
-  "no-trailing-punctuation": {
-    "punctuation": ".,;:。、；：",
-  },
-}
